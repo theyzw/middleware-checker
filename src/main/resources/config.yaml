@@ -1,0 +1,33 @@
+# 中间件连接测试配置
+
+# 要测试的中间件列表，注释掉某行即可跳过该中间件
+check:
+  - redis
+  - mysql
+  # - postgresql
+
+
+# ===== 各中间件连接参数 =====
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password:        # 无密码留空
+  timeout: 2000
+  database: 0      # 默认库编号，0~15
+
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  database: test
+  username: root
+  password:
+  timeout: 2000
+
+postgresql:
+  host: 127.0.0.1
+  port: 5432
+  database: test
+  username: postgres
+  password:
+  timeout: 2000
